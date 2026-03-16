@@ -1,0 +1,16 @@
+class Ipl {
+    String teamName;
+    int teamId;
+    String homeGround;
+    String captain;
+    Player player;
+
+    public void getTeamDetails() {
+        System.out.println("Team: " + this.teamName);
+        System.out.println("ID: " + this.teamId);
+        System.out.println("Ground: " + this.homeGround);
+        System.out.println("Captain: " + this.captain);
+        this.player.getPlayerDetails();
+        System.out.println("\n");
+    }
+}

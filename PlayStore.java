@@ -5,6 +5,14 @@ class PlayStore {
     String category;
     Application application;
 
+    public PlayStore(int storeId,String storeName,  String developer, String category, Application application) {
+        this.storeName = storeName;
+        this.storeId = storeId;
+        this.developer = developer;
+        this.category = category;
+        this.application = application;
+    }
+
     public void getStoreDetails() {
         System.out.println("Store: " + this.storeName);
         System.out.println("ID: " + this.storeId);
@@ -14,4 +22,3 @@ class PlayStore {
         System.out.println("\n");
     }
 }
-

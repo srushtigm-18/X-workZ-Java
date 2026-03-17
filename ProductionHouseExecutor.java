@@ -1,103 +1,83 @@
 class ProductionHouseExecutor {
     public static void main(String[] args) {
-        ProductionHouse ph1 = new ProductionHouse();
-        ph1.studioId = 1; ph1.studioName = "Yash Raj Films"; ph1.founder = "Yash Chopra"; ph1.location = "Mumbai";
-        Movie m1 = new Movie(); m1.movieId = 101; m1.title = "Pathaan"; m1.director = "Siddharth Anand"; m1.genre = "Action"; m1.boxOfficeCr = 1050.3;
-        ph1.movie = m1; ph1.getStudioDetails();
+        Movie m1 = new Movie(101, "Pathaan", "Siddharth Anand", "Action", 1050.3);
+        ProductionHouse ph1 = new ProductionHouse("Yash Raj Films", 1, "Yash Chopra", "Mumbai", m1);
+        ph1.getStudioDetails();
 
-        ProductionHouse ph2 = new ProductionHouse();
-        ph2.studioId = 2; ph2.studioName = "Dharma Productions"; ph2.founder = "Karan Johar"; ph2.location = "Mumbai";
-        Movie m2 = new Movie(); m2.movieId = 102; m2.title = "Brahmastra"; m2.director = "Ayan Mukerji"; m2.genre = "Fantasy"; m2.boxOfficeCr = 431.0;
-        ph2.movie = m2; ph2.getStudioDetails();
+        Movie m2 = new Movie(102, "Brahmastra", "Ayan Mukerji", "Fantasy", 431.0);
+        ProductionHouse ph2 = new ProductionHouse("Dharma Productions", 2, "Karan Johar", "Mumbai", m2);
+        ph2.getStudioDetails();
 
-        ProductionHouse ph3 = new ProductionHouse();
-        ph3.studioId = 3; ph3.studioName = "Red Chillies Entertainment"; ph3.founder = "Shah Rukh Khan"; ph3.location = "Mumbai";
-        Movie m3 = new Movie(); m3.movieId = 103; m3.title = "Jawan"; m3.director = "Atlee"; m3.genre = "Action Thriller"; m3.boxOfficeCr = 1150.0;
-        ph3.movie = m3; ph3.getStudioDetails();
+        Movie m3 = new Movie(103, "Jawan", "Atlee", "Action Thriller", 1150.0);
+        ProductionHouse ph3 = new ProductionHouse("Red Chillies Entertainment", 3, "Shah Rukh Khan", "Mumbai", m3);
+        ph3.getStudioDetails();
 
-        ProductionHouse ph4 = new ProductionHouse();
-        ph4.studioId = 4; ph4.studioName = "Excel Entertainment"; ph4.founder = "Ritesh Sidhwani"; ph4.location = "Mumbai";
-        Movie m4 = new Movie(); m4.movieId = 104; m4.title = "Gully Boy"; m4.director = "Zoya Akhtar"; m4.genre = "Musical Drama"; m4.boxOfficeCr = 240.0;
-        ph4.movie = m4; ph4.getStudioDetails();
+        Movie m4 = new Movie(104, "Gully Boy", "Zoya Akhtar", "Musical Drama", 240.0);
+        ProductionHouse ph4 = new ProductionHouse("Excel Entertainment", 4, "Ritesh Sidhwani", "Mumbai", m4);
+        ph4.getStudioDetails();
 
-        ProductionHouse ph5 = new ProductionHouse();
-        ph5.studioId = 5; ph5.studioName = "Mythri Movie Makers"; ph5.founder = "Naveen Yerneni"; ph5.location = "Hyderabad";
-        Movie m5 = new Movie(); m5.movieId = 105; m5.title = "Pushpa 2"; m5.director = "Sukumar"; m5.genre = "Action Drama"; m5.boxOfficeCr = 1800.0;
-        ph5.movie = m5; ph5.getStudioDetails();
+        Movie m5 = new Movie(105, "Pushpa 2", "Sukumar", "Action Drama", 1800.0);
+        ProductionHouse ph5 = new ProductionHouse("Mythri Movie Makers", 5, "Naveen Yerneni", "Hyderabad", m5);
+        ph5.getStudioDetails();
 
-        ProductionHouse ph6 = new ProductionHouse();
-        ph6.studioId = 6; ph6.studioName = "Hombale Films"; ph6.founder = "Vijay Kiragandur"; ph6.location = "Bengaluru";
-        Movie m6 = new Movie(); m6.movieId = 106; m6.title = "Kantara"; m6.director = "Rishab Shetty"; m6.genre = "Mythological"; m6.boxOfficeCr = 450.0;
-        ph6.movie = m6; ph6.getStudioDetails();
+        Movie m6 = new Movie(106, "Kantara", "Rishab Shetty", "Mythological", 450.0);
+        ProductionHouse ph6 = new ProductionHouse("Hombale Films", 6, "Vijay Kiragandur", "Bengaluru", m6);
+        ph6.getStudioDetails();
 
-        ProductionHouse ph7 = new ProductionHouse();
-        ph7.studioId = 7; ph7.studioName = "Maddock Films"; ph7.founder = "Dinesh Vijan"; ph7.location = "Mumbai";
-        Movie m7 = new Movie(); m7.movieId = 107; m7.title = "Stree 2"; m7.director = "Amar Kaushik"; m7.genre = "Horror Comedy"; m7.boxOfficeCr = 620.0;
-        ph7.movie = m7; ph7.getStudioDetails();
+        Movie m7 = new Movie(107, "Stree 2", "Amar Kaushik", "Horror Comedy", 620.0);
+        ProductionHouse ph7 = new ProductionHouse("Maddock Films", 7, "Dinesh Vijan", "Mumbai", m7);
+        ph7.getStudioDetails();
 
-        ProductionHouse ph8 = new ProductionHouse();
-        ph8.studioId = 8; ph8.studioName = "T-Series Films"; ph8.founder = "Bhushan Kumar"; ph8.location = "Mumbai";
-        Movie m8 = new Movie(); m8.movieId = 108; m8.title = "Bhool Bhulaiyaa 3"; m8.director = "Anees Bazmee"; m8.genre = "Horror Comedy"; m8.boxOfficeCr = 380.0;
-        ph8.movie = m8; ph8.getStudioDetails();
+        Movie m8 = new Movie(108, "Bhool Bhulaiyaa 3", "Anees Bazmee", "Horror Comedy", 380.0);
+        ProductionHouse ph8 = new ProductionHouse("T-Series Films", 8, "Bhushan Kumar", "Mumbai", m8);
+        ph8.getStudioDetails();
 
-        ProductionHouse ph9 = new ProductionHouse();
-        ph9.studioId = 9; ph9.studioName = "Lyca Productions"; ph9.founder = "Kalanithi Maran"; ph9.location = "Chennai";
-        Movie m9 = new Movie(); m9.movieId = 109; m9.title = "Leo"; m9.director = "Lokesh Kanagaraj"; m9.genre = "Action Thriller"; m9.boxOfficeCr = 620.0;
-        ph9.movie = m9; ph9.getStudioDetails();
+        Movie m9 = new Movie(109, "Leo", "Lokesh Kanagaraj", "Action Thriller", 620.0);
+        ProductionHouse ph9 = new ProductionHouse("Lyca Productions", 9, "Kalanithi Maran", "Chennai", m9);
+        ph9.getStudioDetails();
 
-        ProductionHouse ph10 = new ProductionHouse();
-        ph10.studioId = 10; ph10.studioName = "Sun Pictures"; ph10.founder = "Kalanithi Maran"; ph10.location = "Chennai";
-        Movie m10 = new Movie(); m10.movieId = 110; m10.title = "Jailer"; m10.director = "Nelson Dilipkumar"; m10.genre = "Action Comedy"; m10.boxOfficeCr = 650.0;
-        ph10.movie = m10; ph10.getStudioDetails();
+        Movie m10 = new Movie(110, "Jailer", "Nelson Dilipkumar", "Action Comedy", 650.0);
+        ProductionHouse ph10 = new ProductionHouse("Sun Pictures", 10, "Kalanithi Maran", "Chennai", m10);
+        ph10.getStudioDetails();
 
-        ProductionHouse ph11 = new ProductionHouse();
-        ph11.studioId = 11; ph11.studioName = "Aamir Khan Productions"; ph11.founder = "Aamir Khan"; ph11.location = "Mumbai";
-        Movie m11 = new Movie(); m11.movieId = 111; m11.title = "Laal Singh Chaddha"; m11.director = "Advait Chandan"; m11.genre = "Drama"; m11.boxOfficeCr = 58.0;
-        ph11.movie = m11; ph11.getStudioDetails();
+        Movie m11 = new Movie(111, "Laal Singh Chaddha", "Advait Chandan", "Drama", 58.0);
+        ProductionHouse ph11 = new ProductionHouse("Aamir Khan Productions", 11, "Aamir Khan", "Mumbai", m11);
+        ph11.getStudioDetails();
 
-        ProductionHouse ph12 = new ProductionHouse();
-        ph12.studioId = 12; ph12.studioName = "Bhansali Productions"; ph12.founder = "Sanjay Leela Bhansali"; ph12.location = "Mumbai";
-        Movie m12 = new Movie(); m12.movieId = 112; m12.title = "Padmaavat"; m12.director = "Sanjay Leela Bhansali"; m12.genre = "Period Drama"; m12.boxOfficeCr = 585.0;
-        ph12.movie = m12; ph12.getStudioDetails();
+        Movie m12 = new Movie(112, "Padmaavat", "Sanjay Leela Bhansali", "Period Drama", 585.0);
+        ProductionHouse ph12 = new ProductionHouse("Bhansali Productions", 12, "Sanjay Leela Bhansali", "Mumbai", m12);
+        ph12.getStudioDetails();
 
-        ProductionHouse ph13 = new ProductionHouse();
-        ph13.studioId = 13; ph13.studioName = "Viacom18 Studios"; ph13.founder = "Viacom18"; ph13.location = "Mumbai";
-        Movie m13 = new Movie(); m13.movieId = 113; m13.title = "Andhadhun"; m13.director = "Sriram Raghavan"; m13.genre = "Thriller"; m13.boxOfficeCr = 72.0;
-        ph13.movie = m13; ph13.getStudioDetails();
+        Movie m13 = new Movie(113, "Andhadhun", "Sriram Raghavan", "Thriller", 72.0);
+        ProductionHouse ph13 = new ProductionHouse("Viacom18 Studios", 13, "Viacom18", "Mumbai", m13);
+        ph13.getStudioDetails();
 
-        ProductionHouse ph14 = new ProductionHouse();
-        ph14.studioId = 14; ph14.studioName = "Rajshri Productions"; ph14.founder = "Tarachand Barjatya"; ph14.location = "Mumbai";
-        Movie m14 = new Movie(); m14.movieId = 114; m14.title = "Prem Ratan Dhan Payo"; m14.director = "Soiujit Sircar"; m14.genre = "Family Drama"; m14.boxOfficeCr = 405.0;
-        ph14.movie = m14; ph14.getStudioDetails();
+        Movie m14 = new Movie(114, "Prem Ratan Dhan Payo", "Soiujit Sircar", "Family Drama", 405.0);
+        ProductionHouse ph14 = new ProductionHouse("Rajshri Productions", 14, "Tarachand Barjatya", "Mumbai", m14);
+        ph14.getStudioDetails();
 
-        ProductionHouse ph15 = new ProductionHouse();
-        ph15.studioId = 15; ph15.studioName = "Balaji Motion Pictures"; ph15.founder = "Ekta Kapoor"; ph15.location = "Mumbai";
-        Movie m15 = new Movie(); m15.movieId = 115; m15.title = "Dream Girl 2"; m15.director = "Raaj Shaandilyaa"; m15.genre = "Comedy"; m15.boxOfficeCr = 140.0;
-        ph15.movie = m15; ph15.getStudioDetails();
+        Movie m15 = new Movie(115, "Dream Girl 2", "Raaj Shaandilyaa", "Comedy", 140.0);
+        ProductionHouse ph15 = new ProductionHouse("Balaji Motion Pictures", 15, "Ekta Kapoor", "Mumbai", m15);
+        ph15.getStudioDetails();
 
-        ProductionHouse ph16 = new ProductionHouse();
-        ph16.studioId = 16; ph16.studioName = "Arka Media Works"; ph16.founder = "D. Suresh Babu"; ph16.location = "Hyderabad";
-        Movie m16 = new Movie(); m16.movieId = 116; m16.title = "Baahubali 2"; m16.director = "S.S. Rajamouli"; m16.genre = "Epic"; m16.boxOfficeCr = 1810.0;
-        ph16.movie = m16; ph16.getStudioDetails();
+        Movie m16 = new Movie(116, "Baahubali 2", "S.S. Rajamouli", "Epic", 1810.0);
+        ProductionHouse ph16 = new ProductionHouse("Arka Media Works", 16, "D. Suresh Babu", "Hyderabad", m16);
+        ph16.getStudioDetails();
 
-        ProductionHouse ph17 = new ProductionHouse();
-        ph17.studioId = 17; ph17.studioName = "AGS Entertainment"; ph17.founder = "Archana Kalpathi"; ph17.location = "Chennai";
-        Movie m17 = new Movie(); m17.movieId = 117; m17.title = "The Greatest of All Time"; m17.director = "Venky Atluri"; m17.genre = "Action"; m17.boxOfficeCr = 450.0;
-        ph17.movie = m17; ph17.getStudioDetails();
+        Movie m17 = new Movie(117, "The Greatest of All Time", "Venky Atluri", "Action", 450.0);
+        ProductionHouse ph17 = new ProductionHouse("AGS Entertainment", 17, "Archana Kalpathi", "Chennai", m17);
+        ph17.getStudioDetails();
 
-        ProductionHouse ph18 = new ProductionHouse();
-        ph18.studioId = 18; ph18.studioName = "Geetha Arts"; ph18.founder = "Allu Aravind"; ph18.location = "Hyderabad";
-        Movie m18 = new Movie(); m18.movieId = 118; m18.title = "Pushpa The Rise"; m18.director = "Sukumar"; m18.genre = "Action Drama"; m18.boxOfficeCr = 370.0;
-        ph18.movie = m18; ph18.getStudioDetails();
+        Movie m18 = new Movie(118, "Pushpa The Rise", "Sukumar", "Action Drama", 370.0);
+        ProductionHouse ph18 = new ProductionHouse("Geetha Arts", 18, "Allu Aravind", "Hyderabad", m18);
+        ph18.getStudioDetails();
 
-        ProductionHouse ph19 = new ProductionHouse();
-        ph19.studioId = 19; ph19.studioName = "Kavithalaya Productions"; ph19.founder = "K. Balachander"; ph19.location = "Chennai";
-        Movie m19 = new Movie(); m19.movieId = 119; m19.title = "96"; m19.director = "C. Premkumar"; m19.genre = "Romance"; m19.boxOfficeCr = 125.0;
-        ph19.movie = m19; ph19.getStudioDetails();
+        Movie m19 = new Movie(119, "96", "C. Premkumar", "Romance", 125.0);
+        ProductionHouse ph19 = new ProductionHouse("Kavithalaya Productions", 19, "K. Balachander", "Chennai", m19);
+        ph19.getStudioDetails();
 
-        ProductionHouse ph20 = new ProductionHouse();
-        ph20.studioId = 20; ph20.studioName = "Eros International"; ph20.founder = "Arjan Lamba"; ph20.location = "Mumbai";
-        Movie m20 = new Movie(); m20.movieId = 120; m20.title = "Housefull 5"; m20.director = "Tarun Mansukhani"; m20.genre = "Comedy"; m20.boxOfficeCr = 320.0;
-        ph20.movie = m20; ph20.getStudioDetails();
+        Movie m20 = new Movie(120, "Housefull 5", "Tarun Mansukhani", "Comedy", 320.0);
+        ProductionHouse ph20 = new ProductionHouse("Eros International", 20, "Arjan Lamba", "Mumbai", m20);
+        ph20.getStudioDetails();
     }
 }

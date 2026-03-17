@@ -5,6 +5,14 @@ class Dance {
     String founder;
     Form form;
 
+    public Dance(int academyId,String academyName,  String location, String founder, Form form) {
+        this.academyName = academyName;
+        this.academyId = academyId;
+        this.location = location;
+        this.founder = founder;
+        this.form = form;
+    }
+
     public void getDanceDetails() {
         System.out.println("Academy: " + this.academyName);
         System.out.println("ID: " + this.academyId);
@@ -14,5 +22,3 @@ class Dance {
         System.out.println("\n");
     }
 }
-
-

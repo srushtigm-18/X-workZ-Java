@@ -5,6 +5,14 @@ class Policy {
     String budget;
     String duration;
 
+    public Policy(int polId, String name, String focus, String budget, String duration) {
+        this.polId = polId;
+        this.name = name;
+        this.focus = focus;
+        this.budget = budget;
+        this.duration = duration;
+    }
+
     public void getPolicyDetails() {
         System.out.println("Policy ID: " + this.polId);
         System.out.println("Name: " + this.name);

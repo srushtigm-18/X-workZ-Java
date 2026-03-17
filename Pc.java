@@ -5,6 +5,14 @@ class Pc {
     String processor;
     Hardware hardware;
 
+    public Pc(int pcId,String pcModel,  String brand, String processor, Hardware hardware) {
+        this.pcModel = pcModel;
+        this.pcId = pcId;
+        this.brand = brand;
+        this.processor = processor;
+        this.hardware = hardware;
+    }
+
     public void getPcDetails() {
         System.out.println("PC Model: " + this.pcModel);
         System.out.println("ID: " + this.pcId);
@@ -14,4 +22,3 @@ class Pc {
         System.out.println("\n");
     }
 }
-

@@ -6,6 +6,15 @@ class Application {
     double rating;
     int sizeMB;
 
+    public Application(int appId, String appName, String version, long downloadCount, double rating, int sizeMB) {
+        this.appId = appId;
+        this.appName = appName;
+        this.version = version;
+        this.downloadCount = downloadCount;
+        this.rating = rating;
+        this.sizeMB = sizeMB;
+    }
+
     public void getApplicationDetails() {
         System.out.println("App ID: " + this.appId);
         System.out.println("Name: " + this.appName);

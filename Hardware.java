@@ -5,6 +5,14 @@ class Hardware {
     String gpuModel;
     double price;
 
+    public Hardware(int configId, String ramSize, String storage, String gpuModel, double price) {
+        this.configId = configId;
+        this.ramSize = ramSize;
+        this.storage = storage;
+        this.gpuModel = gpuModel;
+        this.price = price;
+    }
+
     public void getHardwareDetails() {
         System.out.println("Config ID: " + this.configId);
         System.out.println("RAM: " + this.ramSize);

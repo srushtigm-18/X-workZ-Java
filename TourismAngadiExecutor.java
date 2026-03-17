@@ -1,103 +1,83 @@
 class TourismAngadiExecutor {
     public static void main(String[] args) {
-        TourismAngadi ta1 = new TourismAngadi();
-        ta1.agencyId = 1; ta1.agencyName = "TourismAngadi"; ta1.location = "Bengaluru"; ta1.founder = "GT Group";
-        Package p1 = new Package(); p1.packageId = 101; p1.destination = "Kodaikanal Ooty"; p1.days = 5; p1.inclusions = "Flight, Hotel, Meals, Sightseeing"; p1.price = 18500;
-        ta1.packageDeal = p1; ta1.getAgencyDetails();
+        Package p1 = new Package(101, "Kodaikanal Ooty", 5, "Flight, Hotel, Meals, Sightseeing", 18500);
+        TourismAngadi ta1 = new TourismAngadi(1, "TourismAngadi", "Bengaluru", "GT Group", p1);
+        ta1.getAgencyDetails();
 
-        TourismAngadi ta2 = new TourismAngadi();
-        ta2.agencyId = 2; ta2.agencyName = "TourismAngadi"; ta2.location = "Bengaluru"; ta2.founder = "GT Group";
-        Package p2 = new Package(); p2.packageId = 102; p2.destination = "Mysore Coorg"; p2.days = 4; p2.inclusions = "AC Bus, Hotel, Breakfast, Palace Tour"; p2.price = 12500;
-        ta2.packageDeal = p2; ta2.getAgencyDetails();
+        Package p2 = new Package(102, "Mysore Coorg", 4, "AC Bus, Hotel, Breakfast, Palace Tour", 12500);
+        TourismAngadi ta2 = new TourismAngadi(2, "TourismAngadi", "Bengaluru", "GT Group", p2);
+        ta2.getAgencyDetails();
 
-        TourismAngadi ta3 = new TourismAngadi();
-        ta3.agencyId = 3; ta3.agencyName = "TourismAngadi"; ta3.location = "Bengaluru"; ta3.founder = "GT Group";
-        Package p3 = new Package(); p3.packageId = 103; p3.destination = "Goa Beach Bliss"; p3.days = 4; p3.inclusions = "Flight, Resort, Water Sports, Party"; p3.price = 21500;
-        ta3.packageDeal = p3; ta3.getAgencyDetails();
+        Package p3 = new Package(103, "Goa Beach Bliss", 4, "Flight, Resort, Water Sports, Party", 21500);
+        TourismAngadi ta3 = new TourismAngadi(3, "TourismAngadi", "Bengaluru", "GT Group", p3);
+        ta3.getAgencyDetails();
 
-        TourismAngadi ta4 = new TourismAngadi();
-        ta4.agencyId = 4; ta4.agencyName = "TourismAngadi"; ta4.location = "Bengaluru"; ta4.founder = "GT Group";
-        Package p4 = new Package(); p4.packageId = 104; p4.destination = "Kerala Backwaters"; p4.days = 6; p4.inclusions = "Flight, Houseboat, Ayurvedic Spa"; p4.price = 28500;
-        ta4.packageDeal = p4; ta4.getAgencyDetails();
+        Package p4 = new Package(104, "Kerala Backwaters", 6, "Flight, Houseboat, Ayurvedic Spa", 28500);
+        TourismAngadi ta4 = new TourismAngadi(4, "TourismAngadi", "Bengaluru", "GT Group", p4);
+        ta4.getAgencyDetails();
 
-        TourismAngadi ta5 = new TourismAngadi();
-        ta5.agencyId = 5; ta5.agencyName = "TourismAngadi"; ta5.location = "Bengaluru"; ta5.founder = "GT Group";
-        Package p5 = new Package(); p5.packageId = 105; p5.destination = "Hampi Badami"; p5.days = 3; p5.inclusions = "Bus, Hotel, Heritage Guide"; p5.price = 8500;
-        ta5.packageDeal = p5; ta5.getAgencyDetails();
+        Package p5 = new Package(105, "Hampi Badami", 3, "Bus, Hotel, Heritage Guide", 8500);
+        TourismAngadi ta5 = new TourismAngadi(5, "TourismAngadi", "Bengaluru", "GT Group", p5);
+        ta5.getAgencyDetails();
 
-        TourismAngadi ta6 = new TourismAngadi();
-        ta6.agencyId = 6; ta6.agencyName = "TourismAngadi"; ta6.location = "Bengaluru"; ta6.founder = "GT Group";
-        Package p6 = new Package(); p6.packageId = 106; p6.destination = "Ooty Kanyakumari"; p6.days = 5; p6.inclusions = "Train, Hotel, Toy Train Ride"; p6.price = 16200;
-        ta6.packageDeal = p6; ta6.getAgencyDetails();
+        Package p6 = new Package(106, "Ooty Kanyakumari", 5, "Train, Hotel, Toy Train Ride", 16200);
+        TourismAngadi ta6 = new TourismAngadi(6, "TourismAngadi", "Bengaluru", "GT Group", p6);
+        ta6.getAgencyDetails();
 
-        TourismAngadi ta7 = new TourismAngadi();
-        ta7.agencyId = 7; ta7.agencyName = "TourismAngadi"; ta7.location = "Bengaluru"; ta7.founder = "GT Group";
-        Package p7 = new Package(); p7.packageId = 107; p7.destination = "Munnar Thekkady"; p7.days = 4; p7.inclusions = "Flight, Jeep Safari, Tea Plantation"; p7.price = 19800;
-        ta7.packageDeal = p7; ta7.getAgencyDetails();
+        Package p7 = new Package(107, "Munnar Thekkady", 4, "Flight, Jeep Safari, Tea Plantation", 19800);
+        TourismAngadi ta7 = new TourismAngadi(7, "TourismAngadi", "Bengaluru", "GT Group", p7);
+        ta7.getAgencyDetails();
 
-        TourismAngadi ta8 = new TourismAngadi();
-        ta8.agencyId = 8; ta8.agencyName = "TourismAngadi"; ta8.location = "Bengaluru"; ta8.founder = "GT Group";
-        Package p8 = new Package(); p8.packageId = 108; p8.destination = "Andaman Nicobar"; p8.days = 6; p8.inclusions = "Flight, Cruise, Scuba Diving"; p8.price = 38500;
-        ta8.packageDeal = p8; ta8.getAgencyDetails();
+        Package p8 = new Package(108, "Andaman Nicobar", 6, "Flight, Cruise, Scuba Diving", 38500);
+        TourismAngadi ta8 = new TourismAngadi(8, "TourismAngadi", "Bengaluru", "GT Group", p8);
+        ta8.getAgencyDetails();
 
-        TourismAngadi ta9 = new TourismAngadi();
-        ta9.agencyId = 9; ta9.agencyName = "TourismAngadi"; ta9.location = "Bengaluru"; ta9.founder = "GT Group";
-        Package p9 = new Package(); p9.packageId = 109; p9.destination = "Leh Ladakh"; p9.days = 7; p9.inclusions = "Flight, Bike Rental, Nubra Valley"; p9.price = 32500;
-        ta9.packageDeal = p9; ta9.getAgencyDetails();
+        Package p9 = new Package(109, "Leh Ladakh", 7, "Flight, Bike Rental, Nubra Valley", 32500);
+        TourismAngadi ta9 = new TourismAngadi(9, "TourismAngadi", "Bengaluru", "GT Group", p9);
+        ta9.getAgencyDetails();
 
-        TourismAngadi ta10 = new TourismAngadi();
-        ta10.agencyId = 10; ta10.agencyName = "TourismAngadi"; ta10.location = "Bengaluru"; ta10.founder = "GT Group";
-        Package p10 = new Package(); p10.packageId = 110; p10.destination = "Rishikesh Haridwar"; p10.days = 5; p10.inclusions = "Train, Rafting, Ganga Aarti"; p10.price = 14500;
-        ta10.packageDeal = p10; ta10.getAgencyDetails();
+        Package p10 = new Package(110, "Rishikesh Haridwar", 5, "Train, Rafting, Ganga Aarti", 14500);
+        TourismAngadi ta10 = new TourismAngadi(10, "TourismAngadi", "Bengaluru", "GT Group", p10);
+        ta10.getAgencyDetails();
 
-        TourismAngadi ta11 = new TourismAngadi();
-        ta11.agencyId = 11; ta11.agencyName = "TourismAngadi"; ta11.location = "Bengaluru"; ta11.founder = "GT Group";
-        Package p11 = new Package(); p11.packageId = 111; p11.destination = "Darjeeling Gangtok"; p11.days = 6; p11.inclusions = "Flight, Toy Train, Tiger Hill"; p11.price = 27800;
-        ta11.packageDeal = p11; ta11.getAgencyDetails();
+        Package p11 = new Package(111, "Darjeeling Gangtok", 6, "Flight, Toy Train, Tiger Hill", 27800);
+        TourismAngadi ta11 = new TourismAngadi(11, "TourismAngadi", "Bengaluru", "GT Group", p11);
+        ta11.getAgencyDetails();
 
-        TourismAngadi ta12 = new TourismAngadi();
-        ta12.agencyId = 12; ta12.agencyName = "TourismAngadi"; ta12.location = "Bengaluru"; ta12.founder = "GT Group";
-        Package p12 = new Package(); p12.packageId = 112; p12.destination = "Jaipur Udaipur"; p12.days = 5; p12.inclusions = "Flight, Lake Palace, Camel Safari"; p12.price = 24500;
-        ta12.packageDeal = p12; ta12.getAgencyDetails();
+        Package p12 = new Package(112, "Jaipur Udaipur", 5, "Flight, Lake Palace, Camel Safari", 24500);
+        TourismAngadi ta12 = new TourismAngadi(12, "TourismAngadi", "Bengaluru", "GT Group", p12);
+        ta12.getAgencyDetails();
 
-        TourismAngadi ta13 = new TourismAngadi();
-        ta13.agencyId = 13; ta13.agencyName = "TourismAngadi"; ta13.location = "Bengaluru"; ta13.founder = "GT Group";
-        Package p13 = new Package(); p13.packageId = 113; p13.destination = "Shimla Manali"; p13.days = 6; p13.inclusions = "Flight, Snow Point, Rohtang Pass"; p13.price = 26500;
-        ta13.packageDeal = p13; ta13.getAgencyDetails();
+        Package p13 = new Package(113, "Shimla Manali", 6, "Flight, Snow Point, Rohtang Pass", 26500);
+        TourismAngadi ta13 = new TourismAngadi(13, "TourismAngadi", "Bengaluru", "GT Group", p13);
+        ta13.getAgencyDetails();
 
-        TourismAngadi ta14 = new TourismAngadi();
-        ta14.agencyId = 14; ta14.agencyName = "TourismAngadi"; ta14.location = "Bengaluru"; ta14.founder = "GT Group";
-        Package p14 = new Package(); p14.packageId = 114; p14.destination = "Pondicherry Mahabalipuram"; p14.days = 4; p14.inclusions = "Bus, Beach Resort, French Colony"; p14.price = 11200;
-        ta14.packageDeal = p14; ta14.getAgencyDetails();
+        Package p14 = new Package(114, "Pondicherry Mahabalipuram", 4, "Bus, Beach Resort, French Colony", 11200);
+        TourismAngadi ta14 = new TourismAngadi(14, "TourismAngadi", "Bengaluru", "GT Group", p14);
+        ta14.getAgencyDetails();
 
-        TourismAngadi ta15 = new TourismAngadi();
-        ta15.agencyId = 15; ta15.agencyName = "TourismAngadi"; ta15.location = "Bengaluru"; ta15.founder = "GT Group";
-        Package p15 = new Package(); p15.packageId = 115; p15.destination = "Chikmagalur Sakleshpur"; p15.days = 3; p15.inclusions = "Bus, Coffee Estate, Homestay"; p15.price = 7200;
-        ta15.packageDeal = p15; ta15.getAgencyDetails();
+        Package p15 = new Package(115, "Chikmagalur Sakleshpur", 3, "Bus, Coffee Estate, Homestay", 7200);
+        TourismAngadi ta15 = new TourismAngadi(15, "TourismAngadi", "Bengaluru", "GT Group", p15);
+        ta15.getAgencyDetails();
 
-        TourismAngadi ta16 = new TourismAngadi();
-        ta16.agencyId = 16; ta16.agencyName = "TourismAngadi"; ta16.location = "Bengaluru"; ta16.founder = "GT Group";
-        Package p16 = new Package(); p16.packageId = 116; p16.destination = "Maldives 4N"; p16.days = 4; p16.inclusions = "Flight, All-Inclusive Resort, Speedboat"; p16.price = 48500;
-        ta16.packageDeal = p16; ta16.getAgencyDetails();
+        Package p16 = new Package(116, "Maldives 4N", 4, "Flight, All-Inclusive Resort, Speedboat", 48500);
+        TourismAngadi ta16 = new TourismAngadi(16, "TourismAngadi", "Bengaluru", "GT Group", p16);
+        ta16.getAgencyDetails();
 
-        TourismAngadi ta17 = new TourismAngadi();
-        ta17.agencyId = 17; ta17.agencyName = "TourismAngadi"; ta17.location = "Bengaluru"; ta17.founder = "GT Group";
-        Package p17 = new Package(); p17.packageId = 117; p17.destination = "Dubai Desert Safari"; p17.days = 5; p17.inclusions = "Flight, Burj Khalifa, Dune Bashing"; p17.price = 38500;
-        ta17.packageDeal = p17; ta17.getAgencyDetails();
+        Package p17 = new Package(117, "Dubai Desert Safari", 5, "Flight, Burj Khalifa, Dune Bashing", 38500);
+        TourismAngadi ta17 = new TourismAngadi(17, "TourismAngadi", "Bengaluru", "GT Group", p17);
+        ta17.getAgencyDetails();
 
-        TourismAngadi ta18 = new TourismAngadi();
-        ta18.agencyId = 18; ta18.agencyName = "TourismAngadi"; ta18.location = "Bengaluru"; ta18.founder = "GT Group";
-        Package p18 = new Package(); p18.packageId = 118; p18.destination = "Singapore Universal"; p18.days = 5; p18.inclusions = "Flight, Sentosa, Gardens by Bay"; p18.price = 42500;
-        ta18.packageDeal = p18; ta18.getAgencyDetails();
+        Package p18 = new Package(118, "Singapore Universal", 5, "Flight, Sentosa, Gardens by Bay", 42500);
+        TourismAngadi ta18 = new TourismAngadi(18, "TourismAngadi", "Bengaluru", "GT Group", p18);
+        ta18.getAgencyDetails();
 
-        TourismAngadi ta19 = new TourismAngadi();
-        ta19.agencyId = 19; ta19.agencyName = "TourismAngadi"; ta19.location = "Bengaluru"; ta19.founder = "GT Group";
-        Package p19 = new Package(); p19.packageId = 119; p19.destination = "Thailand Phuket"; p19.days = 6; p19.inclusions = "Flight, Phi Phi Island, Night Market"; p19.price = 36500;
-        ta19.packageDeal = p19; ta19.getAgencyDetails();
+        Package p19 = new Package(119, "Thailand Phuket", 6, "Flight, Phi Phi Island, Night Market", 36500);
+        TourismAngadi ta19 = new TourismAngadi(19, "TourismAngadi", "Bengaluru", "GT Group", p19);
+        ta19.getAgencyDetails();
 
-        TourismAngadi ta20 = new TourismAngadi();
-        ta20.agencyId = 20; ta20.agencyName = "TourismAngadi"; ta20.location = "Bengaluru"; ta20.founder = "GT Group";
-        Package p20 = new Package(); p20.packageId = 120; p20.destination = "Kashmir Gulmarg"; p20.days = 5; p20.inclusions = "Flight, Houseboat, Gondola Ride"; p20.price = 29800;
-        ta20.packageDeal = p20; ta20.getAgencyDetails();
+        Package p20 = new Package(120, "Kashmir Gulmarg", 5, "Flight, Houseboat, Gondola Ride", 29800);
+        TourismAngadi ta20 = new TourismAngadi(20, "TourismAngadi", "Bengaluru", "GT Group", p20);
+        ta20.getAgencyDetails();
     }
 }

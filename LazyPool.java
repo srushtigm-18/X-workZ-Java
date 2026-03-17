@@ -5,6 +5,14 @@ class LazyPool {
     int capacity;
     double ticketPrice;
 
+    LazyPool(int poolId, String poolName, int lengthMeters, int capacity, double ticketPrice) {
+        this.poolId = poolId;
+        this.poolName = poolName;
+        this.lengthMeters = lengthMeters;
+        this.capacity = capacity;
+        this.ticketPrice = ticketPrice;
+    }
+
     public void getPoolDetails() {
         System.out.println("Pool ID: " + this.poolId);
         System.out.println("Name: " + this.poolName);

@@ -1,9 +1,17 @@
 class Rythms {
-    String academyName;
     int academyId;
+    String academyName;
     String location;
     String genre;
     MusicInstrument instrument;
+
+    public Rythms(int academyId, String academyName, String location, String genre, MusicInstrument instrument) {
+        this.academyId = academyId;
+        this.academyName = academyName;
+        this.location = location;
+        this.genre = genre;
+        this.instrument = instrument;
+    }
 
     public void getRythmsDetails() {
         System.out.println("Academy: " + this.academyName);
@@ -14,4 +22,3 @@ class Rythms {
         System.out.println("\n");
     }
 }
-

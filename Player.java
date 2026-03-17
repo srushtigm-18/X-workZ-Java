@@ -5,6 +5,14 @@ class Player {
     int jerseyNumber;
     double auctionPrice;
 
+    public Player(int playerId, String playerName, String role, int jerseyNumber, double auctionPrice) {
+        this.playerId = playerId;
+        this.playerName = playerName;
+        this.role = role;
+        this.jerseyNumber = jerseyNumber;
+        this.auctionPrice = auctionPrice;
+    }
+
     public void getPlayerDetails() {
         System.out.println("Player ID: " + this.playerId);
         System.out.println("Name: " + this.playerName);
@@ -13,4 +21,3 @@ class Player {
         System.out.println("Price: " + this.auctionPrice + "Cr");
     }
 }
-

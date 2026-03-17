@@ -1,9 +1,17 @@
 class Salon {
-    String salonName;
     int salonId;
+    String salonName;
     String location;
     String chain;
     Service service;
+
+    public Salon(int salonId, String salonName, String location, String chain, Service service) {
+        this.salonId = salonId;
+        this.salonName = salonName;
+        this.location = location;
+        this.chain = chain;
+        this.service = service;
+    }
 
     public void getSalonDetails() {
         System.out.println("Salon: " + this.salonName);
@@ -14,4 +22,3 @@ class Salon {
         System.out.println("\n");
     }
 }
-

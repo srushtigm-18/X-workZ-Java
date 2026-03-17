@@ -5,6 +5,14 @@ class Form {
     int durationMinutes;
     double fee;
 
+    public Form(int formId, String danceName, String originState, int durationMinutes, double fee) {
+        this.formId = formId;
+        this.danceName = danceName;
+        this.originState = originState;
+        this.durationMinutes = durationMinutes;
+        this.fee = fee;
+    }
+
     public void getFormDetails() {
         System.out.println("Form ID: " + this.formId);
         System.out.println("Dance: " + this.danceName);

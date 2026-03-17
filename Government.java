@@ -5,6 +5,14 @@ class Government {
     String dept;
     Policy policy;
 
+    public Government(int policyId,String stateName,  String cmName, String dept, Policy policy) {
+        this.stateName = stateName;
+        this.policyId = policyId;
+        this.cmName = cmName;
+        this.dept = dept;
+        this.policy = policy;
+    }
+
     public void getGovDetails() {
         System.out.println("State: " + this.stateName);
         System.out.println("Policy ID: " + this.policyId);
@@ -14,4 +22,3 @@ class Government {
         System.out.println("\n");
     }
 }
-

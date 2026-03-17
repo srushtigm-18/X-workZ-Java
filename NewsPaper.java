@@ -5,6 +5,14 @@ class NewsPaper {
     String editor;
     Article article;
 
+    public NewsPaper(int paperId,String paperName,  String city, String editor, Article article) {
+        this.paperName = paperName;
+        this.paperId = paperId;
+        this.city = city;
+        this.editor = editor;
+        this.article = article;
+    }
+
     public void getPaperDetails() {
         System.out.println("Newspaper: " + this.paperName);
         System.out.println("ID: " + this.paperId);
@@ -14,4 +22,3 @@ class NewsPaper {
         System.out.println("\n");
     }
 }
-

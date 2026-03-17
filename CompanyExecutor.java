@@ -1,103 +1,83 @@
 class CompanyExecutor {
     public static void main(String[] args) {
-        Company c1 = new Company();
-        c1.companyId = 1; c1.companyName = "Tata Consultancy Services"; c1.headquarters = "Mumbai"; c1.ceo = "K Krithivasan";
-        Project p1 = new Project(); p1.projectId = 101; p1.projectName = "Digital Horizon"; p1.technology = "Cloud AI"; p1.teamSize = 1500; p1.budget = 2500.0;
-        c1.project = p1; c1.getCompanyDetails();
+        Project p1 = new Project(101, "Digital Horizon", "Cloud AI", 1500, 2500.0);
+        Company c1 = new Company(1, "Tata Consultancy Services", "Mumbai", "K Krithivasan", p1);
+        c1.getCompanyDetails();
 
-        Company c2 = new Company();
-        c2.companyId = 2; c2.companyName = "Infosys"; c2.headquarters = "Bengaluru"; c2.ceo = "Salil Parekh";
-        Project p2 = new Project(); p2.projectId = 202; p2.projectName = "Nia AI Platform"; p2.technology = "Generative AI"; p2.teamSize = 1200; p2.budget = 1800.0;
-        c2.project = p2; c2.getCompanyDetails();
+        Project p2 = new Project(202, "Nia AI Platform", "Generative AI", 1200, 1800.0);
+        Company c2 = new Company(2, "Infosys", "Bengaluru", "Salil Parekh", p2);
+        c2.getCompanyDetails();
 
-        Company c3 = new Company();
-        c3.companyId = 3; c3.companyName = "Wipro"; c3.headquarters = "Bengaluru"; c3.ceo = "Srinivas Pallia";
-        Project p3 = new Project(); p3.projectId = 303; p3.projectName = "TopGear Reimagined"; p3.technology = "Full Stack"; p3.teamSize = 800; p3.budget = 1200.0;
-        c3.project = p3; c3.getCompanyDetails();
+        Project p3 = new Project(303, "TopGear Reimagined", "Full Stack", 800, 1200.0);
+        Company c3 = new Company(3, "Wipro", "Bengaluru", "Srinivas Pallia", p3);
+        c3.getCompanyDetails();
 
-        Company c4 = new Company();
-        c4.companyId = 4; c4.companyName = "HCL Technologies"; c4.headquarters = "Noida"; c4.ceo = "C Vijayakumar";
-        Project p4 = new Project(); p4.projectId = 404; p4.projectName = "Mode 1 2 3"; p4.technology = "Digital Engineering"; p4.teamSize = 2000; p4.budget = 3200.0;
-        c4.project = p4; c4.getCompanyDetails();
+        Project p4 = new Project(404, "Mode 1 2 3", "Digital Engineering", 2000, 3200.0);
+        Company c4 = new Company(4, "HCL Technologies", "Noida", "C Vijayakumar", p4);
+        c4.getCompanyDetails();
 
-        Company c5 = new Company();
-        c5.companyId = 5; c5.companyName = "Tech Mahindra"; c5.headquarters = "Pune"; c5.ceo = "Mohit Joshi";
-        Project p5 = new Project(); p5.projectId = 505; p5.projectName = "Cloud Ecosystem"; p5.technology = "Multi Cloud"; p5.teamSize = 950; p5.budget = 1500.0;
-        c5.project = p5; c5.getCompanyDetails();
+        Project p5 = new Project(505, "Cloud Ecosystem", "Multi Cloud", 950, 1500.0);
+        Company c5 = new Company(5, "Tech Mahindra", "Pune", "Mohit Joshi", p5);
+        c5.getCompanyDetails();
 
-        Company c6 = new Company();
-        c6.companyId = 6; c6.companyName = "LTIMindtree"; c6.headquarters = "Bengaluru"; c6.ceo = "Debashis Chatterjee";
-        Project p6 = new Project(); p6.projectId = 606; p6.projectName = "iCORE Genesis"; p6.technology = "Low Code"; p6.teamSize = 650; p6.budget = 950.0;
-        c6.project = p6; c6.getCompanyDetails();
+        Project p6 = new Project(606, "iCORE Genesis", "Low Code", 650, 950.0);
+        Company c6 = new Company(6, "LTIMindtree", "Bengaluru", "Debashis Chatterjee", p6);
+        c6.getCompanyDetails();
 
-        Company c7 = new Company();
-        c7.companyId = 7; c7.companyName = "Mphasis"; c7.headquarters = "Bengaluru"; c7.ceo = "Sitalakshmi S";
-        Project p7 = new Project(); p7.projectId = 707; p7.projectName = "Next Gen Labs"; p7.technology = "Blockchain"; p7.teamSize = 450; p7.budget = 680.0;
-        c7.project = p7; c7.getCompanyDetails();
+        Project p7 = new Project(707, "Next Gen Labs", "Blockchain", 450, 680.0);
+        Company c7 = new Company(7, "Mphasis", "Bengaluru", "Sitalakshmi S", p7);
+        c7.getCompanyDetails();
 
-        Company c8 = new Company();
-        c8.companyId = 8; c8.companyName = "Cognizant"; c8.headquarters = "Chennai"; c8.ceo = "Ravi Kumar S";
-        Project p8 = new Project(); p8.projectId = 808; p8.projectName = "Neuro AI"; p8.technology = "Neuro Symbolic AI"; p8.teamSize = 1800; p8.budget = 2800.0;
-        c8.project = p8; c8.getCompanyDetails();
+        Project p8 = new Project(808, "Neuro AI", "Neuro Symbolic AI", 1800, 2800.0);
+        Company c8 = new Company(8, "Cognizant", "Chennai", "Ravi Kumar S", p8);
+        c8.getCompanyDetails();
 
-        Company c9 = new Company();
-        c9.companyId = 9; c9.companyName = "Accenture"; c9.headquarters = "Gurugram"; c9.ceo = "Manish Sharma";
-        Project p9 = new Project(); p9.projectId = 909; p9.projectName = "SynOps Platform"; p9.technology = "Hyperautomation"; p9.teamSize = 2200; p9.budget = 4200.0;
-        c9.project = p9; c9.getCompanyDetails();
+        Project p9 = new Project(909, "SynOps Platform", "Hyperautomation", 2200, 4200.0);
+        Company c9 = new Company(9, "Accenture", "Gurugram", "Manish Sharma", p9);
+        c9.getCompanyDetails();
 
-        Company c10 = new Company();
-        c10.companyId = 10; c10.companyName = "Deloitte"; c10.headquarters = "Hyderabad"; c10.ceo = "Romal Shetty";
-        Project p10 = new Project(); p10.projectId = 1010; p10.projectName = "Cortex AI"; p10.technology = "Enterprise AI"; p10.teamSize = 1100; p10.budget = 1900.0;
-        c10.project = p10; c10.getCompanyDetails();
+        Project p10 = new Project(1010, "Cortex AI", "Enterprise AI", 1100, 1900.0);
+        Company c10 = new Company(10, "Deloitte", "Hyderabad", "Romal Shetty", p10);
+        c10.getCompanyDetails();
 
-        Company c11 = new Company();
-        c11.companyId = 11; c11.companyName = "Capgemini"; c11.headquarters = "Mumbai"; c11.ceo = "Aiman Ezzat";
-        Project p11 = new Project(); p11.projectId = 111; p11.projectName = "Intelligent Industry"; p11.technology = "Industry 4.0"; p11.teamSize = 1400; p11.budget = 2400.0;
-        c11.project = p11; c11.getCompanyDetails();
+        Project p11 = new Project(111, "Intelligent Industry", "Industry 4.0", 1400, 2400.0);
+        Company c11 = new Company(11, "Capgemini", "Mumbai", "Aiman Ezzat", p11);
+        c11.getCompanyDetails();
 
-        Company c12 = new Company();
-        c12.companyId = 12; c12.companyName = "IBM India"; c12.headquarters = "Bengaluru"; c12.ceo = "Sandip Patel";
-        Project p12 = new Project(); p12.projectId = 1212; p12.projectName = "WatsonX"; p12.technology = "AI Foundation"; p12.teamSize = 900; p12.budget = 1600.0;
-        c12.project = p12; c12.getCompanyDetails();
+        Project p12 = new Project(1212, "WatsonX", "AI Foundation", 900, 1600.0);
+        Company c12 = new Company(12, "IBM India", "Bengaluru", "Sandip Patel", p12);
+        c12.getCompanyDetails();
 
-        Company c13 = new Company();
-        c13.companyId = 13; c13.companyName = "Oracle India"; c13.headquarters = "Bengaluru"; c13.ceo = "Kris Kumar";
-        Project p13 = new Project(); p13.projectId = 1313; p13.projectName = "Fusion Cloud"; p13.technology = "SaaS ERP"; p13.teamSize = 750; p13.budget = 1300.0;
-        c13.project = p13; c13.getCompanyDetails();
+        Project p13 = new Project(1313, "Fusion Cloud", "SaaS ERP", 750, 1300.0);
+        Company c13 = new Company(13, "Oracle India", "Bengaluru", "Kris Kumar", p13);
+        c13.getCompanyDetails();
 
-        Company c14 = new Company();
-        c14.companyId = 14; c14.companyName = "SAP Labs India"; c14.headquarters = "Bengaluru"; c14.ceo = "Pankaj Kumar";
-        Project p14 = new Project(); p14.projectId = 1414; p14.projectName = "RISE with SAP"; p14.technology = "S/4HANA Cloud"; p14.teamSize = 850; p14.budget = 1400.0;
-        c14.project = p14; c14.getCompanyDetails();
+        Project p14 = new Project(1414, "RISE with SAP", "S/4HANA Cloud", 850, 1400.0);
+        Company c14 = new Company(14, "SAP Labs India", "Bengaluru", "Pankaj Kumar", p14);
+        c14.getCompanyDetails();
 
-        Company c15 = new Company();
-        c15.companyId = 15; c15.companyName = "Microsoft India"; c15.headquarters = "Hyderabad"; c15.ceo = "Puneet Chandok";
-        Project p15 = new Project(); p15.projectId = 1515; p15.projectName = "Copilot Enterprise"; p15.technology = "Generative AI"; p15.teamSize = 1300; p15.budget = 2200.0;
-        c15.project = p15; c15.getCompanyDetails();
+        Project p15 = new Project(1515, "Copilot Enterprise", "Generative AI", 1300, 2200.0);
+        Company c15 = new Company(15, "Microsoft India", "Hyderabad", "Puneet Chandok", p15);
+        c15.getCompanyDetails();
 
-        Company c16 = new Company();
-        c16.companyId = 16; c16.companyName = "Google India"; c16.headquarters = "Hyderabad"; c16.ceo = "Sanjay Gupta";
-        Project p16 = new Project(); p16.projectId = 1616; p16.projectName = "Gemini Enterprise"; p16.technology = "Multimodal AI"; p16.teamSize = 1000; p16.budget = 3000.0;
-        c16.project = p16; c16.getCompanyDetails();
+        Project p16 = new Project(1616, "Gemini Enterprise", "Multimodal AI", 1000, 3000.0);
+        Company c16 = new Company(16, "Google India", "Hyderabad", "Sanjay Gupta", p16);
+        c16.getCompanyDetails();
 
-        Company c17 = new Company();
-        c17.companyId = 17; c17.companyName = "Amazon India"; c17.headquarters = "Bengaluru"; c17.ceo = "Manish Tiwary";
-        Project p17 = new Project(); p17.projectId = 1717; p17.projectName = "AWS GenAI"; p17.technology = "Serverless AI"; p17.teamSize = 950; p17.budget = 1800.0;
-        c17.project = p17; c17.getCompanyDetails();
+        Project p17 = new Project(1717, "AWS GenAI", "Serverless AI", 950, 1800.0);
+        Company c17 = new Company(17, "Amazon India", "Bengaluru", "Manish Tiwary", p17);
+        c17.getCompanyDetails();
 
-        Company c18 = new Company();
-        c18.companyId = 18; c18.companyName = "Aditya Birla"; c18.headquarters = "Pune"; c18.ceo = "Jyothindra Thota";
-        Project p18 = new Project(); p18.projectId = 1818; p18.projectName = "ABSL Digital"; p18.technology = "Digital Banking"; p18.teamSize = 600; p18.budget = 950.0;
-        c18.project = p18; c18.getCompanyDetails();
+        Project p18 = new Project(1818, "ABSL Digital", "Digital Banking", 600, 950.0);
+        Company c18 = new Company(18, "Aditya Birla", "Pune", "Jyothindra Thota", p18);
+        c18.getCompanyDetails();
 
-        Company c19 = new Company();
-        c19.companyId = 19; c19.companyName = "Zensar"; c19.headquarters = "Pune"; c19.ceo = "Sandeep Kumar";
-        Project p19 = new Project(); p19.projectId = 1919; p19.projectName = "EOS Platform"; p19.technology = "Experience Engineering"; p19.teamSize = 550; p19.budget = 820.0;
-        c19.project = p19; c19.getCompanyDetails();
+        Project p19 = new Project(1919, "EOS Platform", "Experience Engineering", 550, 820.0);
+        Company c19 = new Company(19, "Zensar", "Pune", "Sandeep Kumar", p19);
+        c19.getCompanyDetails();
 
-        Company c20 = new Company();
-        c20.companyId = 20; c20.companyName = "KPMG India"; c20.headquarters = "Mumbai"; c20.ceo = "Vinayak Bhargava";
-        Project p20 = new Project(); p20.projectId = 2020; p20.projectName = "Ignite Digital"; p20.technology = "Risk AI"; p20.teamSize = 700; p20.budget = 1100.0;
-        c20.project = p20; c20.getCompanyDetails();
+        Project p20 = new Project(2020, "Ignite Digital", "Risk AI", 700, 1100.0);
+        Company c20 = new Company(20, "KPMG India", "Mumbai", "Vinayak Bhargava", p20);
+        c20.getCompanyDetails();
     }
 }

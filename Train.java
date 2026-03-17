@@ -1,13 +1,21 @@
 class Train {
-    String trainName;
     int trainId;
+    String trainName;
     String source;
     String destination;
     Bogie bogie;
 
+    public Train(int trainId, String trainName, String source, String destination, Bogie bogie) {
+        this.trainId = trainId;
+        this.trainName = trainName;
+        this.source = source;
+        this.destination = destination;
+        this.bogie = bogie;
+    }
+
     public void getTrainDetails() {
-        System.out.println("Train Name: " + this.trainName);
-        System.out.println("Train ID: " + this.trainId);
+        System.out.println("Train: " + this.trainName);
+        System.out.println("ID: " + this.trainId);
         System.out.println("Source: " + this.source);
         System.out.println("Destination: " + this.destination);
         this.bogie.getBogieDetails();

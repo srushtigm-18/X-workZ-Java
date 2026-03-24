@@ -1,0 +1,27 @@
+class Gym {
+
+    private String equipments[] = new String[16];   
+    int index;
+
+    public boolean addEquipment(String equipmentName) {
+        boolean isAdded = false;
+
+        if (equipmentName != null && !equipmentName.isEmpty()) {
+                equipments[index] = equipmentName;
+                index++;
+                isAdded = true;
+          
+        } else {
+            System.out.println(equipmentName + " is invalid");
+        }
+        return isAdded;
+    }
+
+    public void getEquipment() {
+        for (String equipment : equipments) {
+           
+                System.out.println(equipment);
+            
+        }
+    }
+}

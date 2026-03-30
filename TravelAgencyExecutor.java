@@ -21,5 +21,24 @@ class TravelAgencyExecutor {
         agency.addPlace("Bengaluru");
 
         agency.getPlaces();
+        System.out.println();
+
+        int index = 9;
+        String place = agency.getPlaceNameByIndex(index);
+        System.out.println("The place at index " + index + " is: " + place);
+        System.out.println();
+
+        String placeName = "Coorg";
+        int i = agency.getIndexByPlaceName(placeName);
+        System.out.println();
+
+        String updated = "Leh–Ladakh Combo";
+        boolean ref = agency.updatePlace("Ladakh", updated);
+        agency.getPlaces();
+        System.out.println();
+
+        String deleting = "Rishikesh";
+        boolean reff = agency.deletePlace(deleting);
+        agency.getPlaces();
     }
 }

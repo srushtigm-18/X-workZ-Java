@@ -21,5 +21,35 @@ class UniverseExecutor {
         uni.addGalaxy("UGC 4881");
 
         uni.getGalaxies();
+        System.out.println();
+
+        int index = 5;
+        String galaxy = uni.getGalaxyByIndex(index);
+        System.out.println("Galaxy at index " + index + " is: " + galaxy);
+        System.out.println();
+
+        String galaxyName = "Andromeda";
+        int idx = uni.getIndexByGalaxy(galaxyName);
+        if (idx != -1) {
+            System.out.println("Index for galaxy " + galaxyName + " is: " + idx);
+        } else {
+            System.out.println("Galaxy '" + galaxyName + "' not found.");
+        }
+        System.out.println();
+
+        String updated = "Andromeda Galaxy ";
+        boolean ref = uni.updateGalaxy("Andromeda", updated);
+        if (ref) {
+            System.out.println("Galaxy updated to: " + updated);
+        }
+        uni.getGalaxies();
+        System.out.println();
+
+        String deleting = "Comet Galaxy";
+        boolean reff = uni.deleteGalaxy(deleting);
+        if (reff) {
+            System.out.println("Galaxy " + deleting + " is deleted.");
+        }
+        uni.getGalaxies();
     }
 }

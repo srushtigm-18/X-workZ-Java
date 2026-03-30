@@ -7,7 +7,7 @@ class TVExecutor {
         tv.addChannel("Star Plus");
         tv.addChannel("Star Maa");
         tv.addChannel("Sun TV");
-        tv.addChannel("Colors TV");
+        tv.addChannel("ETV");
         tv.addChannel("Zee TV");
         tv.addChannel("Discovery Channel");
         tv.addChannel("National Geographic");
@@ -21,5 +21,27 @@ class TVExecutor {
         tv.addChannel("TV9 News");
 
         tv.getChannels();
-    }
+		
+		int index = 7;
+		String channel = tv.getChannelByIndex(index);
+		System.out.println("The tv channel of index "+index+" is "+channel);
+		
+		String channelName = "Star Maa";
+		index = tv.getIndexByChannel(channelName);
+		System.out.println("the channel for index "+index+" is "+channelName);
+		
+		System.out.println();
+
+        String updatedChannel = "Colors Kannada";
+        boolean ref =tv.updateChannel("ETV",updatedChannel);
+        System.out.println("The ETV is updated to "+ updatedChannel);
+        tv.getChannels();
+
+        System.out.println();
+
+        String channelNameIs = "AXN" ;
+        boolean reff = tv.deleteChannel(channelNameIs);
+        System.out.println("The "+ channelNameIs+" is deleted ");                
+        tv.getChannels();   
+}
 }

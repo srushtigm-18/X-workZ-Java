@@ -1,28 +1,48 @@
 class ElectricalShopExecutor {
     public static void main(String[] args) {
-        ElectricalShop shop = new ElectricalShop();
+        ElectricalShop electricalShop = new ElectricalShop();
 
-        shop.addAppliance("Refrigerator");
-        shop.addAppliance("Washing Machine");
-        shop.addAppliance("Air Conditioner");
-        shop.addAppliance("Microwave Oven");
-        shop.addAppliance("LED TV");
-        shop.addAppliance("Electric Cooker");
-        shop.addAppliance("Induction Cooktop");
-        shop.addAppliance("Water Heater");
-        shop.addAppliance("Air Cooler");
-        shop.addAppliance("Ceiling Fan");
-        shop.addAppliance("Exhaust Fan");
-        shop.addAppliance("Electric Kettle");
-        shop.addAppliance("Mixer Grinder");
-        shop.addAppliance("Toaster");
-        shop.addAppliance("Hand Blender");
-        shop.addAppliance("Electric Iron");
-        shop.addAppliance("Hair Dryer");
-        shop.addAppliance("Water Purifier");
-        shop.addAppliance("Vacuum Cleaner");
-        shop.addAppliance("LED Bulb Pack");
+        electricalShop.addAppliance("Refrigerator");
+        electricalShop.addAppliance("Washing Machine");
+        electricalShop.addAppliance("Air Conditioner");
+        electricalShop.addAppliance("Microwave Oven");
+        electricalShop.addAppliance("LED TV");
+        electricalShop.addAppliance("Electric Cooker");
+        electricalShop.addAppliance("Induction Cooktop");
+        electricalShop.addAppliance("Water Heater");
+        electricalShop.addAppliance("Air Cooler");
+        electricalShop.addAppliance("Ceiling Fan");
+        electricalShop.addAppliance("Exhaust Fan");
+        electricalShop.addAppliance("Electric Kettle");
+        electricalShop.addAppliance("Mixer Grinder");
+        electricalShop.addAppliance("Toaster");
+        electricalShop.addAppliance("Hand Blender");
+        electricalShop.addAppliance("Electric Iron");
+        electricalShop.addAppliance("Hair Dryer");
+        electricalShop.addAppliance("Water Purifier");
+        electricalShop.addAppliance("Vacuum Cleaner");
+        electricalShop.addAppliance("LED Bulb Pack");
 
-        shop.getAppliances();
+        electricalShop.getAppliances();
+        System.out.println();
+
+        int index = 10;
+        String appliance = electricalShop.getApplianceByIndex(index);
+        System.out.println("The appliance at index " + index + " is: " + appliance);
+        System.out.println();
+
+        String applianceName = "Air Conditioner";
+        int i = electricalShop.getIndexByApplianceName(applianceName);
+        System.out.println("Appliance '" + applianceName + "' is at index: " + i);
+        System.out.println();
+
+        String updated = "Air Conditioner (Split Inverter)";
+        boolean ref = electricalShop.updateAppliance("Air Conditioner", updated);
+        electricalShop.getAppliances();
+        System.out.println();
+
+        String deleting = "Vacuum Cleaner";
+        boolean reff = electricalShop.deleteAppliance(deleting);
+        electricalShop.getAppliances();
     }
 }

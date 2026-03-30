@@ -19,5 +19,24 @@ class PlaylistExecutor {
         playlist.addSong("Happier");
 
         playlist.getSongs();
+        System.out.println();
+
+        int index = 6;
+        String song = playlist.getSongNameByIndex(index);
+        System.out.println("The song at index " + index + " is: " + song);
+        System.out.println();
+
+        String songName = "Shape of You";
+        int i = playlist.getIndexBySongName(songName);
+        System.out.println();
+
+        String updated = "Levitating (Remix)";
+        boolean ref = playlist.updateSong("Levitating", updated);
+        playlist.getSongs();
+        System.out.println();
+
+        String deleting = "Rap God";
+        boolean reff = playlist.deleteSong(deleting);
+        playlist.getSongs();
     }
 }

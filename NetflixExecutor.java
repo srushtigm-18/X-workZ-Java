@@ -22,5 +22,25 @@ class NetflixExecutor {
         netflix.addWebSeries("Breaking Bad");
 
         netflix.getWebSeries();
+        System.out.println();
+
+        int index = 3;
+        String series = netflix.getWebSeriesNameByIndex(index);
+        System.out.println("The web series at index " + index + " is: " + series);
+        System.out.println();
+
+        String seriesName = "Elite";
+        int i = netflix.getIndexByWebSeriesName(seriesName);
+        System.out.println("Web series '" + seriesName + "' is at index: " + i);
+        System.out.println();
+
+        String updated = "Elite (Season 6)";
+        boolean ref = netflix.updateWebSeries("Elite", updated);
+        netflix.getWebSeries();
+        System.out.println();
+
+        String deleting = "Mindhunter";
+        boolean reff = netflix.deleteWebSeries(deleting);
+        netflix.getWebSeries();
     }
 }

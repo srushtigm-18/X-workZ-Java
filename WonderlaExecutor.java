@@ -25,5 +25,29 @@ class WonderlaExecutor {
         wonderla.addWaterGame("Adventure River");
 
         wonderla.getWaterGames();
+        System.out.println();
+
+        int index = 7;
+        String game = wonderla.getWaterGameByIndex(index);
+        System.out.println("The game at index " + index + " is: " + game);
+        System.out.println();
+
+        String gameName = "Lazy River";
+        int i = wonderla.getIndexByWaterGameName(gameName);
+        System.out.println("The game '" + gameName + "' is at index: " + i);
+        System.out.println();
+
+
+        String updatedGame = "Lazy River (Wave Mode)";
+        boolean ref = wonderla.updateWaterGame("Lazy River", updatedGame);
+		wonderla.getWaterGames();
+
+        System.out.println();
+
+
+        String deletingGame = "Rain Disco";
+        boolean reff = wonderla.deleteWaterGame(deletingGame);
+        wonderla.getWaterGames();
+
     }
 }

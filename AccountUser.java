@@ -1,4 +1,4 @@
-class UserAccount {
+class AccountUser {
     private int userId;
     private String userName;
     private String userEmail;

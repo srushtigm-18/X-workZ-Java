@@ -1,68 +1,21 @@
 class GitHub {
+    int githubId;
 	
-    GitHubAccount account[] = new GitHubAccount[19];
-	int index;
-
-    public boolean createUserAccount(GitHubAccount account) {
-        boolean isAccountCreated = false;
-        boolean isUsernameValid = false;
-        boolean isEmailValid = false;
-        boolean isPasswordValid = false;
-        boolean isCountryValid = false;
-        boolean isVerifyEmailValid = false;
-        boolean isCaptchaValid = false;
-
-        String username = account.getUsername();
-        if (username != null && !username.isEmpty()) {
-            isUsernameValid = true;
-        }
-
-        String email = account.getEmail();
-        if (email != null && !email.isEmpty()) {
-            isEmailValid = true;
-        }
-
-        String password = account.getPassword();
-        if (password != null && password.length() >= 6 && !password.isEmpty()) {
-            isPasswordValid = true;
-        }
-
-        String country = account.getCountry();
-        if (country != null && !country.isEmpty()) {
-            isCountryValid = true;
-        }
-
-        boolean verifyEmail = account.getVerifyEmail();
-        if (verifyEmail) {
-            isVerifyEmailValid = true;
-        }
-
-        String captcha = account.getCaptcha();
-        if (captcha != null && !captcha.isEmpty()) {
-            isCaptchaValid = true;
-        }
-
-        if (isUsernameValid && isEmailValid && isPasswordValid && isCountryValid && isVerifyEmailValid && isCaptchaValid) {
-            this.account[index++] = account;
-            isAccountCreated = true;
-        }
-        return isAccountCreated;
+    Repository repository;
+    
+	
+    GitHub(int githubId, Repository repository) {
+        this.githubId = githubId;
+        this.repository = repository;
     }
-
-    public void getUserDetails() {
-		for(GitHubAccount account : account){
-			System.out.println("--------------------------------");
-        if (account != null) {
-            System.out.println("User account created on GitHub");
-            System.out.println("Username : " + account.getUsername());
-            System.out.println("Email : " + account.getEmail());
-            System.out.println("Password : " + account.getPassword());
-            System.out.println("Country : " + account.getCountry());
-            System.out.println("Verify email : " + account.getVerifyEmail());
-            System.out.println("Captcha : " + account.getCaptcha());
-        } else {
-            System.out.println("No user account exists.");
-        }
+    
+    public void getDetails() {
+	
+        System.out.println("GitHub id is: " + this.githubId);
+        System.out.println("Repository id is: " + this.repository.repoId);
+        System.out.println("Repository name is: " + this.repository.repoName);
+        System.out.println("Repository language is: " + this.repository.language);
+        System.out.println("Repository visibility is: " + this.repository.visibility);
+        System.out.println("Repository stars is: " + this.repository.stars);
     }
-	}
 }
